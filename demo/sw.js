@@ -1,4 +1,4 @@
-const CACHE = "dushou-v1";
+const CACHE = "dushou-v2";
 const ASSETS = [
   "./",
   "./index.html",
