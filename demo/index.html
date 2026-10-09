@@ -20,17 +20,18 @@
   <div id="app" class="app">
     <header class="top">
       <h1>剁手清单</h1>
-      <button type="button" class="chip" id="btnSettings" aria-label="设置">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-          <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94l-.36-2.54A.48.48 0 0 0 14 2h-4a.48.48 0 0 0-.48.41l-.36 2.54c-.6.24-1.14.55-1.63.94l-2.39-.96a.49.49 0 0 0-.59.22L2.63 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.75 14.52a.49.49 0 0 0-.12.61l1.92 3.32c.13.22.4.3.59.22l2.39-.96c.49.39 1.03.7 1.63.94l.36 2.54c.05.24.25.41.48.41h4c.24 0 .44-.17.48-.41l.36-2.54c.6-.24 1.14-.55 1.63-.94l2.39.96c.22.08.46 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
-        </svg>
-      </button>
+      <div class="top-actions">
+        <button type="button" class="chip" id="btnSettings" aria-label="设置">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94l-.36-2.54A.48.48 0 0 0 14 2h-4a.48.48 0 0 0-.48.41l-.36 2.54c-.6.24-1.14.55-1.63.94l-2.39-.96a.49.49 0 0 0-.59.22L2.63 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.75 14.52a.49.49 0 0 0-.12.61l1.92 3.32c.13.22.4.3.59.22l2.39-.96c.49.39 1.03.7 1.63.94l.36 2.54c.05.24.25.41.48.41h4c.24 0 .44-.17.48-.41l.36-2.54c.6-.24 1.14-.55 1.63-.94l2.39.96c.22.08.46 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+          </svg>
+        </button>
+        <button type="button" class="fab" id="btnAdd" aria-label="添加">+</button>
+      </div>
     </header>
 
     <nav class="tiles" id="filters"></nav>
     <section id="listArea" class="list"></section>
-
-    <button type="button" class="fab" id="btnAdd" aria-label="添加">+</button>
   </div>
 
   <dialog id="onboard" class="focus" data-tone="info">

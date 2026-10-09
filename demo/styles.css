@@ -35,7 +35,7 @@ body {
   padding:
     max(16px, env(safe-area-inset-top))
     max(16px, env(safe-area-inset-right))
-    calc(96px + env(safe-area-inset-bottom))
+    max(28px, env(safe-area-inset-bottom))
     max(16px, env(safe-area-inset-left));
   min-height: 100%;
   min-height: 100dvh;
@@ -60,6 +60,12 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.top-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
 .chip {
   width: 44px;
   height: 44px;
@@ -75,24 +81,19 @@ body {
 }
 .chip:active { transform: scale(0.94); }
 .chip svg { display: block; }
-
-/* 固定右下角，小屏也不会被顶栏挤没 */
 .fab {
-  position: fixed;
-  right: max(16px, env(safe-area-inset-right));
-  bottom: max(20px, env(safe-area-inset-bottom));
-  z-index: 40;
-  width: 60px;
-  height: 60px;
+  width: 56px;
+  height: 56px;
+  flex: none;
   border: none;
   border-radius: 50%;
   background: var(--yellow);
   color: var(--ink);
-  font-size: 38px;
+  font-size: 36px;
   font-weight: 900;
   line-height: 1;
   cursor: pointer;
-  box-shadow: 0 8px 24px rgba(28, 28, 28, 0.18);
+  box-shadow: none;
 }
 .fab:active { transform: scale(0.94); }
 
@@ -372,10 +373,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-body:has(dialog[open]) .fab {
-  visibility: hidden;
-  pointer-events: none;
-}
 .x {
   align-self: flex-end;
   width: 48px;
@@ -649,7 +646,8 @@ body:has(dialog[open]) .fab {
   .q-title { font-size: 24px; }
   .result-num { font-size: 64px; }
   .detail-name { font-size: 26px; }
-  .fab { width: 56px; height: 56px; font-size: 34px; }
+  .fab { width: 48px; height: 48px; font-size: 30px; }
+  .chip { width: 40px; height: 40px; }
   .blocks { gap: 8px; }
   .block { padding: 12px 8px; }
   .block b { font-size: 18px; }
