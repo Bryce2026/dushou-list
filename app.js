@@ -1,5 +1,6 @@
 const STORAGE_ITEMS = "dushou.items.v1";
 const STORAGE_SETTINGS = "dushou.settings.v1";
+const STORAGE_ONBOARD = "dushou.onboarded.v1";
 const DAY_MS = 86400000;
 
 const QUESTIONS = [
@@ -553,6 +554,44 @@ function applyAction(act, itemId) {
   render();
 }
 
+function paintOnboard() {
+  $("#onboardBody").innerHTML = `
+    <h2 class="settings-title">剁手清单</h2>
+    <p class="onboard-lead">想买先别付钱，关进来冷静几天。</p>
+    <div class="onboard-cards">
+      <div class="onboard-card c1">
+        <b>加一条</b>
+        <span>点右下角 +，记下想买的东西</span>
+      </div>
+      <div class="onboard-card c2">
+        <b>答 5 题</b>
+        <span>算出真实度，分数越低冻越久</span>
+      </div>
+      <div class="onboard-card c3">
+        <b>熬过冷却</b>
+        <span>到期变绿色，再决定剁不剁</span>
+      </div>
+      <div class="onboard-card c4">
+        <b>反剁也行</b>
+        <span>不想买就放弃，省下的看得见</span>
+      </div>
+    </div>
+  `;
+  $("#onboardFoot").innerHTML = `<button type="button" class="btn primary" id="onboardGo">开始用</button>`;
+  $("#onboardGo").addEventListener("click", finishOnboard);
+}
+
+function finishOnboard() {
+  localStorage.setItem(STORAGE_ONBOARD, "1");
+  $("#onboard").close();
+}
+
+function maybeOnboard() {
+  if (localStorage.getItem(STORAGE_ONBOARD)) return;
+  paintOnboard();
+  $("#onboard").showModal();
+}
+
 function bind() {
   $("#btnAdd").addEventListener("click", openWizard);
   $("#btnSettings").addEventListener("click", openSettings);
@@ -563,7 +602,7 @@ function bind() {
   window.addEventListener("keydown", (e) => {
     if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "n") {
       e.preventDefault();
-      if (!$("#wizard").open) openWizard();
+      if (!$("#wizard").open && !$("#onboard").open) openWizard();
     }
   });
 }
@@ -571,3 +610,4 @@ function bind() {
 maybeSeed();
 bind();
 render();
+maybeOnboard();
