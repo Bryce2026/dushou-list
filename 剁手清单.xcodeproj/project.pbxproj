@@ -1,0 +1,167 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		001C9A2A2A00000100000001 /* 剁手清单App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000100000001 /* 剁手清单App.swift */; };
+		001C9A2A2A00000200000001 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000200000001 /* ContentView.swift */; };
+		001C9A2A2A00000300000001 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000300000001 /* Models.swift */; };
+		001C9A2A2A00000400000001 /* Quiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000400000001 /* Quiz.swift */; };
+		001C9A2A2A00000500000001 /* QuizSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000500000001 /* QuizSheet.swift */; };
+		001C9A2A2A00000600000001 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000600000001 /* DetailView.swift */; };
+		001C9A2A2A00000700000001 /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000700000001 /* ItemStore.swift */; };
+		001C9A2A2A00000800000001 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001C9A2B2A00000800000001 /* AppDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		001C9A2B2A00000100000001 /* 剁手清单App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "剁手清单App.swift"; sourceTree = "<group>"; };
+		001C9A2B2A00000200000001 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		001C9A2B2A00000300000001 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		001C9A2B2A00000400000001 /* Quiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz.swift; sourceTree = "<group>"; };
+		001C9A2B2A00000500000001 /* QuizSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizSheet.swift; sourceTree = "<group>"; };
+		001C9A2B2A00000600000001 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		001C9A2B2A00000700000001 /* ItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
+		001C9A2B2A00000800000001 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		001C9A2B2A00010000000001 /* 剁手清单.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "剁手清单.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		001C9A2C2A00000100000001 = {
+			isa = PBXGroup;
+			children = (
+				001C9A2D2A00000100000001 /* 剁手清单 */,
+				001C9A2C2A00000200000001 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		001C9A2D2A00000100000001 = {
+			isa = PBXGroup;
+			children = (
+				001C9A2B2A00000800000001 /* AppDelegate.swift */,
+				001C9A2B2A00000100000001 /* 剁手清单App.swift */,
+				001C9A2B2A00000200000001 /* ContentView.swift */,
+				001C9A2B2A00000300000001 /* Models.swift */,
+				001C9A2B2A00000400000001 /* Quiz.swift */,
+				001C9A2B2A00000500000001 /* QuizSheet.swift */,
+				001C9A2B2A00000600000001 /* DetailView.swift */,
+				001C9A2B2A00000700000001 /* ItemStore.swift */,
+			);
+			path = 剁手清单;
+			sourceTree = "<group>";
+		};
+		001C9A2C2A00000200000001 = {
+			isa = PBXGroup;
+			children = (
+				001C9A2B2A00010000000001 /* 剁手清单.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		001C9A2E2A00000100000001 /* 剁手清单 */ = {
+			isa = PBXNativeTarget;
+			productName = 剁手清单;
+			productType = com.apple.product-type.application;
+			packageProductDependencies = (
+			);
+			buildConfigurationList = 001C9A2F2A00000100000001 /* Build configuration list for PBXNativeTarget "剁手清单" */;
+			buildPhases = (
+				001C9A300000000100000001 /* Sources */,
+				001C9A300000000200000001 /* Frameworks */,
+				001C9A300000000300000001 /* Resources */,
+			);
+			dependencies = (
+			);
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		001C9A312A00000100000001 /* Project object */ = {
+			isa = PBXProject;
+			targets = (
+				001C9A2E2A00000100000001 /* 剁手清单 */,
+			);
+			buildConfigurationList = 001C9A322A00000100000001 /* Build configuration list for PBXProject "剁手清单" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = zh-Hans;
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		001C9A300000000100000001 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			files = (
+				001C9A2A2A00000100000001 /* 剁手清单App.swift in Sources */,
+				001C9A2A2A00000200000001 /* ContentView.swift in Sources */,
+				001C9A2A2A00000300000001 /* Models.swift in Sources */,
+				001C9A2A2A00000400000001 /* Quiz.swift in Sources */,
+				001C9A2A2A00000500000001 /* QuizSheet.swift in Sources */,
+				001C9A2A2A00000600000001 /* DetailView.swift in Sources */,
+				001C9A2A2A00000700000001 /* ItemStore.swift in Sources */,
+				001C9A2A2A00000800000001 /* AppDelegate.swift in Sources */,
+			);
+		};
+/* End PBXSourcesBuildPhase section */
+
+		001C9A300000000200000001 /* Frameworks */ = { isa = PBXFrameworksBuildPhase; };
+		001C9A300000000300000001 /* Resources */ = { isa = PBXResourcesBuildPhase; };
+
+/* Begin XCBuildConfiguration section */
+		001C9A330000000100000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.dushou;
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+			};
+		};
+		001C9A330000000200000001 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.dushou;
+				SWIFT_VERSION = 5.0;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGNING_ALLOWED = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+			};
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		001C9A2F2A00000100000001 /* Build configuration list for PBXNativeTarget "剁手清单" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001C9A330000000100000001 /* Debug */,
+				001C9A330000000200000001 /* Release */,
+			);
+		};
+		001C9A322A00000100000001 /* Build configuration list for PBXProject "剁手清单" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				001C9A330000000100000001 /* Debug */,
+				001C9A330000000200000001 /* Release */,
+			);
+		};
+/* End XCConfigurationList section */
+
+	};
+	rootObject = 001C9A312A00000100000001 /* Project object */;
+}

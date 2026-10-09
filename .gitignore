@@ -1,0 +1,8 @@
+.DS_Store
+*.xcuserstate
+xcuserdata/
+DerivedData/
+.idea/
+.vscode/
+node_modules/
+*.log

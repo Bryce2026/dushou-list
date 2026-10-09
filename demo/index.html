@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffd54a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="剁手清单" />
+  <title>剁手清单</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" type="image/png" sizes="192x192" href="icons/icon-192.png" />
+  <link rel="apple-touch-icon" href="icons/icon-180.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="app" class="app">
+    <header class="top">
+      <h1>剁手清单</h1>
+      <div class="top-actions">
+        <button type="button" class="chip" id="btnSettings" aria-label="设置">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+            <path fill="currentColor" d="M19.14 12.94c.04-.31.06-.63.06-.94s-.02-.63-.06-.94l2.03-1.58a.49.49 0 0 0 .12-.61l-1.92-3.32a.49.49 0 0 0-.59-.22l-2.39.96a7.2 7.2 0 0 0-1.63-.94l-.36-2.54A.48.48 0 0 0 14 2h-4a.48.48 0 0 0-.48.41l-.36 2.54c-.6.24-1.14.55-1.63.94l-2.39-.96a.49.49 0 0 0-.59.22L2.63 8.87a.49.49 0 0 0 .12.61l2.03 1.58c-.04.31-.06.63-.06.94s.02.63.06.94L2.75 14.52a.49.49 0 0 0-.12.61l1.92 3.32c.13.22.4.3.59.22l2.39-.96c.49.39 1.03.7 1.63.94l.36 2.54c.05.24.25.41.48.41h4c.24 0 .44-.17.48-.41l.36-2.54c.6-.24 1.14-.55 1.63-.94l2.39.96c.22.08.46 0 .59-.22l1.92-3.32a.49.49 0 0 0-.12-.61l-2.01-1.58zM12 15.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/>
+          </svg>
+        </button>
+        <button type="button" class="fab" id="btnAdd" aria-label="添加">+</button>
+      </div>
+    </header>
+
+    <nav class="tiles" id="filters"></nav>
+    <section id="listArea" class="list"></section>
+  </div>
+
+  <dialog id="settings" class="focus" data-tone="settings">
+    <div class="focus-inner">
+      <button type="button" class="x" id="settingsClose" aria-label="关闭">×</button>
+      <div id="settingsBody" class="focus-body settings-body"></div>
+      <div class="focus-foot" id="settingsFoot"></div>
+    </div>
+  </dialog>
+
+  <dialog id="wizard" class="focus">
+    <form method="dialog" id="wizardForm" class="focus-inner">
+      <button type="button" class="x" id="wizardClose" aria-label="关闭">×</button>
+      <div id="wizardBody" class="focus-body"></div>
+      <div id="wizardFoot" class="focus-foot"></div>
+    </form>
+  </dialog>
+
+  <dialog id="detail" class="focus">
+    <div class="focus-inner">
+      <button type="button" class="x" id="detailClose" aria-label="关闭">×</button>
+      <div id="detailBody" class="focus-body"></div>
+      <div id="detailFoot" class="detail-foot"></div>
+    </div>
+  </dialog>
+
+  <dialog id="confirm" class="confirm">
+    <div class="confirm-card">
+      <p id="confirmText" class="confirm-text"></p>
+      <div class="confirm-actions">
+        <button type="button" class="btn" id="confirmCancel">取消</button>
+        <button type="button" class="btn primary" id="confirmOk">确定</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script type="module" src="app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(() => {});
+    }
+  </script>
+</body>
+</html>
