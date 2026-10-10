@@ -561,7 +561,7 @@ function paintOnboard() {
     <div class="onboard-cards">
       <div class="onboard-card c1">
         <b>加一条</b>
-        <span>点右下角 +，记下想买的东西</span>
+        <span>点右上角 +，记下想买的东西</span>
       </div>
       <div class="onboard-card c2">
         <b>答 5 题</b>
