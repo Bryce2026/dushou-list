@@ -1,19 +1,12 @@
-# 剁手清单 · PWA Demo
+# demo · 剁手清单 PWA
 
-想买先冷却。纯前端，数据在本机。
+这是可运行的网页版本，也是 GitHub Pages 上线的内容。
 
-## 启动
+- 试用：https://bryce2026.github.io/dushou-list/
+- 仓库说明见根目录 [README.md](../README.md)
 
 ```bash
-cd demo
 python3 -m http.server 8765
 ```
 
-打开：http://localhost:8765
-
-安卓 Chrome：菜单 → **安装应用** / **添加到主屏幕**（需 http(s)，不要用 `file://`）。
-
-## PWA
-
-- `manifest.webmanifest` + `icons/`
-- `sw.js` 基础离线缓存
+打开 http://localhost:8765

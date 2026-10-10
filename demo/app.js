@@ -557,25 +557,17 @@ function applyAction(act, itemId) {
 function paintOnboard() {
   $("#onboardBody").innerHTML = `
     <h2 class="settings-title">剁手清单</h2>
-    <p class="onboard-lead">想买先别付钱，关进来冷静几天。</p>
-    <div class="onboard-cards">
-      <div class="onboard-card c1">
-        <b>加一条</b>
-        <span>点右上角 +，记下想买的东西</span>
-      </div>
-      <div class="onboard-card c2">
-        <b>答 5 题</b>
-        <span>算出真实度，分数越低冻越久</span>
-      </div>
-      <div class="onboard-card c3">
-        <b>熬过冷却</b>
-        <span>到期变绿色，再决定剁不剁</span>
-      </div>
-      <div class="onboard-card c4">
-        <b>反剁也行</b>
-        <span>不想买就放弃，省下的看得见</span>
-      </div>
-    </div>
+    <p class="onboard-intro">
+      这不是一份帮你记住欲望的清单。<br>
+      是你此刻放不下、会纠结的念头——先关进来。<br>
+      过几天忘了、放下了，或许更好。
+    </p>
+    <ol class="onboard-steps">
+      <li>记下想买的</li>
+      <li>答几题，进冷却</li>
+      <li>到期再决定：剁，或不剁</li>
+    </ol>
+    <p class="onboard-ps">P.S. 数据存在本机浏览器里，清缓存可能丢。<br>丢了也挺好，对吧？</p>
   `;
   $("#onboardFoot").innerHTML = `<button type="button" class="btn primary" id="onboardGo">开始用</button>`;
   $("#onboardGo").addEventListener("click", finishOnboard);
@@ -587,7 +579,9 @@ function finishOnboard() {
 }
 
 function maybeOnboard() {
-  if (localStorage.getItem(STORAGE_ONBOARD)) return;
+  const force = new URLSearchParams(location.search).has("onboard");
+  if (!force && localStorage.getItem(STORAGE_ONBOARD)) return;
+  if (force) localStorage.removeItem(STORAGE_ONBOARD);
   paintOnboard();
   $("#onboard").showModal();
 }
